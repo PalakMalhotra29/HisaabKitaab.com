@@ -1,0 +1,1286 @@
+{
+	"info": {
+		"_postman_id": "8ce3ce8f-40b8-4ea9-8bad-548e639e74e1",
+		"name": "HisaabKitaab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Manroop",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "man@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "876543267",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "man@123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/user/adduser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"user",
+								"adduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/user/showUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"user",
+								"showUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "impalak220@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "default"
+								},
+								{
+									"key": "isAdmin",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "userId",
+									"value": "63c67d4394d6930cf02392e3\n",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63c67dbf94d6930cf02392f0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/user/singleUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"user",
+								"singleUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63c67d7f94d6930cf02392e6",
+									"type": "default"
+								},
+								{
+									"key": "name",
+									"value": "Palak",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "palak@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "123456789",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/user/updateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImltcGFsYWsyMjBAZ21haWwuY29tIiwiaXNJbmRpdmlkdWFsIjpmYWxzZSwiaXNTaG9wa2VlcGVyIjpmYWxzZSwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY3NTM1NjQ5M30.8te7wW-KfslTRUse_V9sLGyXLTpo4LmEny7OnJ_W62s",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "63c67d4394d6930cf02392e3",
+									"type": "default"
+								},
+								{
+									"key": "categoryName",
+									"value": "Balloons",
+									"type": "default"
+								},
+								{
+									"key": "categoryDesc",
+									"value": "Expenses on decorations'",
+									"type": "default"
+								},
+								{
+									"key": "categoryGST",
+									"value": "5%",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/category/addCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImltcGFsYWsyMjBAZ21haWwuY29tIiwiaXNJbmRpdmlkdWFsIjpmYWxzZSwiaXNTaG9wa2VlcGVyIjpmYWxzZSwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY3NTM1NjQ5M30.8te7wW-KfslTRUse_V9sLGyXLTpo4LmEny7OnJ_W62s",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/category/showCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"category",
+								"showCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImltcGFsYWsyMjBAZ21haWwuY29tIiwiaXNJbmRpdmlkdWFsIjpmYWxzZSwiaXNTaG9wa2VlcGVyIjpmYWxzZSwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY3NTM1NjQ5M30.8te7wW-KfslTRUse_V9sLGyXLTpo4LmEny7OnJ_W62s",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63dbead25e12e30fa7ec96cf",
+									"type": "default"
+								},
+								{
+									"key": "categoryName",
+									"value": "Balloons",
+									"type": "default"
+								},
+								{
+									"key": "categoryDesc",
+									"value": "Expenses on balloons for decorations.",
+									"type": "default"
+								},
+								{
+									"key": "categoryGST",
+									"value": "2%",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/category/updateCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"category",
+								"updateCategory"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63c69126e59e73c2058971a1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Single Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImltcGFsYWsyMjBAZ21haWwuY29tIiwiaXNJbmRpdmlkdWFsIjpmYWxzZSwiaXNTaG9wa2VlcGVyIjpmYWxzZSwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY3NTM1NjQ5M30.8te7wW-KfslTRUse_V9sLGyXLTpo4LmEny7OnJ_W62s",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63c691b0aacd9e304e2f230e",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/category/singleCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"category",
+								"singleCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expense",
+			"item": [
+				{
+					"name": "Add Expense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "63c67d7f94d6930cf02392e6",
+									"type": "default"
+								},
+								{
+									"key": "expense",
+									"value": "4500",
+									"type": "default"
+								},
+								{
+									"key": "categoryId",
+									"value": "63c69126e59e73c2058971a1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/addExpense",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addExpense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Expense",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/expense/showExpense",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"expense",
+								"showExpense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single expense",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63da3e3b062dd448c859e88d",
+									"type": "default"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/expense/singleExpense",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"expense",
+								"singleExpense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update expense",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63da3e3b062dd448c859e88d",
+									"type": "default"
+								},
+								{
+									"key": "expense",
+									"value": "5000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/expense/updateExpense",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"expense",
+								"updateExpense"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "customerName",
+									"value": "abc",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "abc@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/addCustomer",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addCustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shopkeeper",
+			"item": [
+				{
+					"name": "Add Shopkeeper",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Shop3",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "shop3@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "654845512",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "shop@3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/shopkeeper/addShopkeeper",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"shopkeeper",
+								"addShopkeeper"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show shopkeeper",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/admin/shopkeeper/showshopkeeper",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"shopkeeper",
+								"showshopkeeper"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update shopkeeper",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "6418426a40ce093762a05b71",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/shopkeeper/updateShop",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"shopkeeper",
+								"updateShop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show single shop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "6418426a40ce093762a05b71",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/shopkeeper/singleShop",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"shopkeeper",
+								"singleShop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "budget",
+			"item": [
+				{
+					"name": "Add Budget",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "63c67d4394d6930cf02392e3",
+									"type": "default"
+								},
+								{
+									"key": "totalBudget",
+									"value": "10000",
+									"type": "default"
+								},
+								{
+									"key": "budgetDesc",
+									"value": "Monthly budget",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/budget/addBudget",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"budget",
+								"addBudget"
+							],
+							"query": [
+								{
+									"key": "totalBudget",
+									"value": "63c67d4394d6930cf02392e3",
+									"disabled": true
+								},
+								{
+									"key": "budgetDesc",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Budget",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/budget/showBudget",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"budget",
+								"showBudget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single  budget",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63fece871983d175f59df3a1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/budget/singleBudget",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"budget",
+								"singleBudget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Budget",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63fece871983d175f59df3a1",
+									"type": "default"
+								},
+								{
+									"key": "totalBudget",
+									"value": "15000",
+									"type": "default"
+								},
+								{
+									"key": "budgetDesc",
+									"value": "My monthly budget.",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/budget/updateBudget",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"budget",
+								"updateBudget"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "Add Purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "63c67d4394d6930cf02392e3",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "63c69126e59e73c2058971a1",
+									"type": "text"
+								},
+								{
+									"key": "amountOfOne",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "totalAmount",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "purchaseNumber",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/purchase/addPurchase",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"purchase",
+								"addPurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/admin/Purchase/showPurchase",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"Purchase",
+								"showPurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63fed6f59b62c0c0b0787a47",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/purchase/singlePurchase",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"purchase",
+								"singlePurchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63fed6cf9b62c0c0b0787a44",
+									"type": "default"
+								},
+								{
+									"key": "billPaid",
+									"value": "true",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/purchase/updatePurchase",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"purchase",
+								"updatePurchase"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Add Sales",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "63c67d4394d6930cf02392e3",
+									"type": "default"
+								},
+								{
+									"key": "categoryId",
+									"value": "63dbead25e12e30fa7ec96cf",
+									"type": "default"
+								},
+								{
+									"key": "amountOfOne",
+									"value": "10",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "totalAmount",
+									"value": "200",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/sales/addSales",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"sales",
+								"addSales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Sales",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/sales/showSales",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"sales",
+								"showSales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show single sale",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "63fed99ed4966bdd3c7e13c6",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/sales/singleSales",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"sales",
+								"singleSales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Sales",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "63fed99ed4966bdd3c7e13c6",
+									"type": "default"
+								},
+								{
+									"key": "totalAmount",
+									"value": "500",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/sales/updateSales",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"sales",
+								"updateSales"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
